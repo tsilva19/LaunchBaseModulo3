@@ -1,0 +1,24 @@
+{% extends "layout.njk" %}
+
+{% block head %}
+ <title> Sobre- Thiago Alves</title>
+{% endblock %}
+
+{% block content %}
+
+
+
+    <div id="wrapper">
+        <img src="{{index.avatar_url}}" alt="Imagem de {{index.name}}">
+        <h1>{{ index.name }}</h1>
+        <h2>{{ index.role }}</h2>
+        <p> {{ index.description }} </p>
+    </div>
+
+    <div id="links-footer" class="links">
+        {%for link in index.links%}
+            <a href="{{ link.url }}" target="_blank">{{ link.name }}</a>
+        {%endfor %}
+     </div>  
+
+    {% endblock %}
